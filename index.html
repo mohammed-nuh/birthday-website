@@ -1,146 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Birthday</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
-  </head>
-  <body
-    style="background-image: url('/Pink\ Purple\ Star\ Happy\ Birthday.png')"
-  >
-    <!-- Animated Background Elements -->
-    <div class="background-animation">
-      <div class="floating-balloons">
-        <div class="balloon balloon-1">🎈</div>
-        <div class="balloon balloon-2">🎈</div>
-        <div class="balloon balloon-3">🎈</div>
-        <div class="balloon balloon-4">🎈</div>
-        <div class="balloon balloon-5">🎈</div>
-      </div>
-      <div class="confetti-container" id="confettiContainer"></div>
-      <div class="particles" id="particles"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+</head>
+
+<body style="background-image: url('/Pink\ Purple\ Star\ Happy\ Birthday.png')">
+  <!-- Animated Background Elements -->
+  <div class="background-animation">
+    <div class="floating-balloons">
+      <div class="balloon balloon-1">🎈</div>
+      <div class="balloon balloon-2">🎈</div>
+      <div class="balloon balloon-3">🎈</div>
+      <div class="balloon balloon-4">🎈</div>
+      <div class="balloon balloon-5">🎈</div>
     </div>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <div class="nav-logo">🎂 Birthday Wish By Nuh</div>
-        <div class="nav-toggle" id="navToggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#music" class="nav-link">Music</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1 class="hero-title animate-bounce">Happy Birthday Alizah!</h1>
-        <div class="birthday-candles">
-          <div class="candle">
-            <div class="flame"></div>
-            <div class="wick"></div>
-            <div class="wax"></div>
-          </div>
-          <div class="candle">
-            <div class="flame"></div>
-            <div class="wick"></div>
-            <div class="wax"></div>
-          </div>
-          <div class="candle">
-            <div class="flame"></div>
-            <div class="wick"></div>
-            <div class="wax"></div>
-          </div>
-        </div>
-<button class="cta-button" id="celebrateBtn">
-  Start the Celebration! 🎊
-</button>
-
-<canvas id="confettiCanvas"></canvas>
-
-<!-- Birthday Song (hidden initially) -->
-<div id="audioWrapper" class="hidden flex justify-center mt-6">
-  <audio id="birthdaySong" src="audio/ALIZAH Happy Birthday Song  Happy Birthday to You.mp3" controls class="w-full max-w-md"></audio>
-</div>
-
-<script>
-  const celebrateBtn = document.getElementById("celebrateBtn");
-  const audioWrapper = document.getElementById("audioWrapper");
-  const birthdaySong = document.getElementById("birthdaySong");
-
-  celebrateBtn.addEventListener("click", () => {
-    audioWrapper.classList.remove("hidden"); // show audio
-    birthdaySong.play(); // auto play when shown
-  });
-</script>
-    </section>
-
-    <!-- Music Section -->
-    <section id="music" class="py-12 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-black">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-8">🎵 Birthday Playlist</h2>
-
-    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 max-w-2xl mx-auto shadow-lg space-y-6">
-      
-      <!-- Track 1 -->
-      <div class="bg-white/20 p-4 rounded-lg">
-        <h3 class="font-semibold">1. Maula Mere</h3>
-        <audio controls class="w-full mt-2">
-          <source src="audio/Maula Mere Maula Song Lyrics (English Translation)  Roop Kumar Rathod  Mithoon  Anwar.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-
-      <!-- Track 2 -->
-      <div class="bg-white/20 p-4 rounded-lg">
-        <h3 class="font-semibold">2. Tera Hone Laga Hoon</h3>
-        <audio controls class="w-full mt-2">
-          <source src="audio/Tera Hone Laga Hoon Lyrics - Ajab Prem Ki Gazab Kahaani  Pritam, Atif Aslam, Alisha Chinai.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-
-      <!-- Track 3 -->
-      <div class="bg-white/20 p-4 rounded-lg">
-        <h3 class="font-semibold">3. Khuda Jaane</h3>
-        <audio controls class="w-full mt-2">
-          <source src="audio/Khuda Jaane - KK & Shilpa Rao (Lyrics)  Lyrical Bam Hindi.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-
-    </div>
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div class="particles" id="particles"></div>
   </div>
-</section>
 
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">🎂 Birthday Wish By Nuh</div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#music" class="nav-link">Music</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <p>
-          &copy; Birthday Celebration Website By Nuh
-        </p>
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#music">Music</a>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title animate-bounce">Happy Birthday Alizah!</h1>
+      <!-- Animated Age Paragraph -->
+      <p class="text-2xl font-semibold text-pink-700 mb-2">
+        You are &nbsp;
+        <span id="age" class="text-4xl font-extrabold text-purple-700 transition-all duration-500 inline-block"></span>
+      </p>
+      <script>
+        let ageEl = document.getElementById("age");
+        let count = 1;
+        let target = 18;
+
+        let interval = setInterval(() => {
+          ageEl.textContent = count;
+
+          // pop effect while counting
+          ageEl.classList.add("scale-125");
+          setTimeout(() => ageEl.classList.remove("scale-125"), 200);
+
+          if (count === target) {
+            clearInterval(interval);
+
+            // final celebration animation 🎉
+            ageEl.classList.add(
+              "text-pink-500",
+              "scale-150",
+              "rotate-6"
+            );
+
+            // remove rotate after a bit for smooth reset
+            setTimeout(() => {
+              ageEl.classList.remove("rotate-6");
+            }, 1500);
+          }
+          count++;
+        }, 120);
+      </script>
+      <div class="birthday-candles">
+        <div class="candle">
+          <div class="flame"></div>
+          <div class="wick"></div>
+          <div class="wax"></div>
+        </div>
+        <div class="candle">
+          <div class="flame"></div>
+          <div class="wick"></div>
+          <div class="wax"></div>
+        </div>
+        <div class="candle">
+          <div class="flame"></div>
+          <div class="wick"></div>
+          <div class="wax"></div>
         </div>
       </div>
-    </footer>
+      <button class="cta-button" id="celebrateBtn">
+        Start the Celebration! 🎊
+      </button>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
-  </body>
+      <canvas id="confettiCanvas"></canvas>
+
+      <!-- Birthday Song (hidden initially) -->
+      <div id="audioWrapper" class="hidden flex justify-center mt-6">
+        <audio id="birthdaySong" src="audio/ALIZAH Happy Birthday Song  Happy Birthday to You.mp3" controls
+          class="w-full max-w-md"></audio>
+      </div>
+
+      <script>
+        const celebrateBtn = document.getElementById("celebrateBtn");
+        const audioWrapper = document.getElementById("audioWrapper");
+        const birthdaySong = document.getElementById("birthdaySong");
+
+        celebrateBtn.addEventListener("click", () => {
+          audioWrapper.classList.remove("hidden"); // show audio
+          birthdaySong.play(); // auto play when shown
+        });
+      </script>
+  </section>
+
+  <!-- Music Section -->
+  <section id="music" class="py-12 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-black">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">🎵 Birthday Playlist</h2>
+
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 max-w-2xl mx-auto shadow-lg space-y-6">
+
+        <!-- Track 1 -->
+        <div class="bg-white/20 p-4 rounded-lg">
+          <h3 class="font-semibold">1. Maula Mere</h3>
+          <audio controls class="w-full mt-2">
+            <source
+              src="audio/Maula Mere Maula Song Lyrics (English Translation)  Roop Kumar Rathod  Mithoon  Anwar.mp3"
+              type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <!-- Track 2 -->
+        <div class="bg-white/20 p-4 rounded-lg">
+          <h3 class="font-semibold">2. Tera Hone Laga Hoon</h3>
+          <audio controls class="w-full mt-2">
+            <source
+              src="audio/Tera Hone Laga Hoon Lyrics - Ajab Prem Ki Gazab Kahaani  Pritam, Atif Aslam, Alisha Chinai.mp3"
+              type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <!-- Track 3 -->
+        <div class="bg-white/20 p-4 rounded-lg">
+          <h3 class="font-semibold">3. Khuda Jaane</h3>
+          <audio controls class="w-full mt-2">
+            <source src="audio/Khuda Jaane - KK & Shilpa Rao (Lyrics)  Lyrical Bam Hindi.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        &copy; Birthday Celebration Website By Nuh
+      </p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#music">Music</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
 </html>
